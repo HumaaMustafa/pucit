@@ -2,6 +2,7 @@ package com.example.myapp;
 import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+    private Toolbar toolbar;
     TextView txt;
     Button b1 , b2 , b3 , b4 , b5 , b6;
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        toolbar =findViewById(R.id.MyToolBar);
         txt =(TextView) findViewById(R.id.ww);
         Button click1 =(Button) findViewById(R.id.orange);
         Button click2 = (Button) findViewById(R.id.red);
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         Button click4 = (Button) findViewById(R.id.yellow);
         Button click5 = (Button) findViewById(R.id.green);
         Button click6 = (Button) findViewById(R.id.pink);
+
+        setSupportActionBar(toolbar);
 
         final MediaPlayer mp1=MediaPlayer.create(getApplicationContext(), R.raw.orange);
         final MediaPlayer mp2=MediaPlayer.create(getApplicationContext(), R.raw.red);
