@@ -7,6 +7,9 @@
     android:foregroundTint="#6E0000"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/appbar"
+       />
     <Button
         android:id="@+id/orange"
         android:layout_width="wrap_content"
