@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import android.view.View;
 
+import android.view.Menu;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,4 +84,9 @@ public class MainActivity extends AppCompatActivity {
         click6.setOnClickListener(elem);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+       getMenuInflater().inflate(R.menu.main_menu, menu);
+    }
 }
